@@ -22,8 +22,8 @@ magnified subimages of (a). (c) LF-InterNet. (d) LF-DFnet. (e) LF-IINet. (f) Dis
 
 Fig. 6. For 2x LF SR, the perceptual merits of our method for DHR,testing = 4:2:0(A). (a) The ground truth LF image, Stanford Gantry-Tarot Cards S. (b)
 The two magnified subimages of (a). (c) LF-InterNet. (d) LF-DFnet. (e) LF-IINet. (f) DistgSSR. (g) Ours for LF-InterNet. (h) Ours for
-LF-DFnet. (i) Ours for LF-IINet. (j) Ours for DistgSSR.
-
+LF-DFnet. (i) Ours for LF-IINet. (j) Ours for DistgSSR.  
+More Visual Results can visit [1](https://github.com/jasonlun1997/DCC-main/tree/main/Figs/420A) [2](https://github.com/jasonlun1997/DCC-main/tree/main/Figs/420D)
 ## Code
 ### Dependecies
 * Python 3.9.16
