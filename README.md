@@ -1,5 +1,5 @@
 # DCC-main
-Downsampling Consistency Correction-Based Quality Enhancement for CNN-Based Light Field Image Super-Resolution (2023)
+Downsampling Consistency Correction-Based Quality Enhancement for CNN-Based Light Field Image Super-Resolution (2023) by Kuo-Liang Chung and Tsung-Lun Hsieh
 
 ## News
 * Apr 6, 2023: upload the pre-trained models of our method to [GoogleDrive](https://drive.google.com/drive/folders/12eQfFK2Lm102WqTK5BCa1H6mp5VK7PBk?usp=sharing).
