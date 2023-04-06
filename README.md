@@ -13,50 +13,51 @@ the upsampled LF image.
 We use the datasets which can be accessed from [LF-DFnet](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9286855), including EPFL, HCI, HCI_old, INRIA_Lytro and Stanford_Gantry datasets for training and testing. Please download the dataset in the official repository of [LF-DFnet]([https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9286855](https://github.com/YingqianWang/LF-DFnet)).
 
 ## Results
-![f5](/Figs/Fig5.png)  
+![f5](/Figs/2x420A_Stanford_Gantry_Tarot_Card_S.png)  
 Fig. 5. For 2x LF SR, the perceptual merits of our method for D_{HR,testing} = 4:2:0(Direct). (a) The ground truth LF image, HCI-bedroom. (b) The two
 magnified subimages of (a). (c) LF-InterNet. (d) LF-DFnet. (e) LF-IINet. (f) DistgSSR. (g) Ours for LF-InterNet. (h) Ours for LF-DFnet.
 (i) Ours for LF-IINet. (j) Ours for DistgSSR.
 
-![f6](/Figs/Fig6.png)  
+![f6](/Figs/2x420D_HCI_bedroom.png)  
 
 Fig. 6. For 2x LF SR, the perceptual merits of our method for D_{HR,testing} = 4:2:0(A). (a) The ground truth LF image, Stanford Gantry-Tarot Cards S. (b)
 The two magnified subimages of (a). (c) LF-InterNet. (d) LF-DFnet. (e) LF-IINet. (f) DistgSSR. (g) Ours for LF-InterNet. (h) Ours for
 LF-DFnet. (i) Ours for LF-IINet. (j) Ours for DistgSSR.  
 
-More visual results can visit with [./Figs/420A](https://github.com/jasonlun1997/DCC-main/tree/main/Figs/420A) or [./Figs/420D](https://github.com/jasonlun1997/DCC-main/tree/main/Figs/420D).  
+More visual results can visit the link [./Figs/420A](https://github.com/jasonlun1997/DCC-main/tree/main/Figs/420A) or [./Figs/420D](https://github.com/jasonlun1997/DCC-main/tree/main/Figs/420D).  
 ## Code
 ### Dependecies
 * Python 3.9.16
 * Pytorch 1.13.1 + torchvision 0.14.1 + cuda 11.7.1
 * Matlab  
 ### Recognizer
-2x/4x position and scheme recognizer can be download from [GoogleDrive](https://drive.google.com/drive/folders/12eQfFK2Lm102WqTK5BCa1H6mp5VK7PBk?usp=sharing)  
-After download the five datasets, and then generate the recognizer training or test data:
-* Setting the parameters in 'DownsampleMat2png.m'
+For 2x and 4x LF SR, the downsampled position and the downsampling scheme recognizers can be download from [GoogleDrive](https://drive.google.com/drive/folders/12eQfFK2Lm102WqTK5BCa1H6mp5VK7PBk?usp=sharing)  
+After downloading the five datasets, the recognizer is used to create the training or testing data:
+* First, set the parameters in 'DownsampleMat2png.m'
   ```
   src_dataset_for = 'training'; 
   ```
   ```
   src_dataset_for = 'test'; 
   ```  
-  To generate the kind of data set which you want, and Run it
+  Secordly, generate the kind of data set which you want, and then run
   ```
   ./recognizer/DownsampleMat2png.m 
   ```  
-### Prepare Training and Test Data
-* Setting the parameters  in 'Generate_Data_for_Training.m'
+### Prepare Training Data
+* First, set the parameters  in 'Generate_Data_for_Training.m'
   ```
   patch_Sr_y = imresize(patch_Hr_y, downRatio); % bicubic down
   ```
   ```
   patch_Sr_y = convert420_A(patch_Hr_y,factor); % 420A down
   ```
-  To generate the kind of data set which you want, and Run it
+  Secordly, generate the kind of data set which you want, and run
   ```
   Generate_Data_for_Training.m
-  ```
-* Setting the parameters in 'Generate_Data_for_Test.m'
+  ```  
+### Prepare Testing Data
+* First, set the parameters in 'Generate_Data_for_Test.m'
   ```
   temp_Lr_y = convert420_A(temp_Hr_y,factor);   % 420A down
   ```
@@ -66,7 +67,7 @@ After download the five datasets, and then generate the recognizer training or t
   ```
   temp_Lr_y = imresize(temp_Hr_y, downRatio);   % bicubic down
   ```
-  To generate the kind of data set which you want, and Run it
+  Secordly, generate the kind of data set which you want, and run
   ```
   Generate_Data_for_Test.m
   ```
@@ -108,4 +109,4 @@ Our work and implementations are inspired and based on the following projects:
 [LF-IINet](https://github.com/GaoshengLiu/LF-IINet)  
 [DistgSSR](https://github.com/YingqianWang/DistgSSR)  
 [BasicLFSR](https://github.com/ZhengyuLiang24/BasicLFSR)  
-Our sincere thanks to the authors for sharing their code and amazing research work! They provide pre-trained models and suggested training parameters, please refer to the link
+We appreciate the authors for sharing their codes. Their pre-trained models with the related training parameters can be access from the link.
