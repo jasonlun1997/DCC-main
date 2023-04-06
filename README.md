@@ -33,7 +33,7 @@ More visual results can visit with [./Figs/420A](https://github.com/jasonlun1997
 ### Recognizer
 2x/4x position and scheme recognizer can be download from [GoogleDrive](https://drive.google.com/drive/folders/12eQfFK2Lm102WqTK5BCa1H6mp5VK7PBk?usp=sharing)  
 After download the five datasets, and then generate the recognizer training or test data:
-* Setting the parameters
+* Setting the parameters in 'DownsampleMat2png.m'
   ```
   src_dataset_for = 'training'; 
   ```
@@ -45,26 +45,26 @@ After download the five datasets, and then generate the recognizer training or t
   ./recognizer/DownsampleMat2png.m 
   ```  
 ### Prepare Training and Test Data
-* Setting the parameters
+* Setting the parameters  in 'Generate_Data_for_Training.m'
   ```
-  patch_Sr_y = imresize(patch_Hr_y, downRatio); %bicubic down
+  patch_Sr_y = imresize(patch_Hr_y, downRatio); % bicubic down
   ```
   ```
-  patch_Sr_y = convert420_A(patch_Hr_y,factor); %420A down
+  patch_Sr_y = convert420_A(patch_Hr_y,factor); % 420A down
   ```
   To generate the kind of data set which you want, and Run it
   ```
   Generate_Data_for_Training.m
   ```
-* Setting the parameters
+* Setting the parameters in 'Generate_Data_for_Test.m'
   ```
-  temp_Lr_y = convert420_A(temp_Hr_y,factor);   %420A down
-  ```
-  ```
-  temp_Lr_y = convert420_D(temp_Hr_y,factor);   %420D down     
+  temp_Lr_y = convert420_A(temp_Hr_y,factor);   % 420A down
   ```
   ```
-  temp_Lr_y = imresize(temp_Hr_y, downRatio);   %bicubic down
+  temp_Lr_y = convert420_D(temp_Hr_y,factor);   % 420D down     
+  ```
+  ```
+  temp_Lr_y = imresize(temp_Hr_y, downRatio);   % bicubic down
   ```
   To generate the kind of data set which you want, and Run it
   ```
