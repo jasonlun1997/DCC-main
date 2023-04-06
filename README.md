@@ -14,17 +14,17 @@ We use the processed data by [LF-DFnet](https://ieeexplore.ieee.org/stamp/stamp.
 
 ## Results
 ![f5](/Figs/Fig5.png)  
-Fig. 5. For 2x LF SR, the perceptual merits of our method for DHR,testing = 4:2:0(Direct). (a) The ground truth LF image, HCI-bedroom. (b) The two
+Fig. 5. For 2x LF SR, the perceptual merits of our method for D_{HR,testing} = 4:2:0(Direct). (a) The ground truth LF image, HCI-bedroom. (b) The two
 magnified subimages of (a). (c) LF-InterNet. (d) LF-DFnet. (e) LF-IINet. (f) DistgSSR. (g) Ours for LF-InterNet. (h) Ours for LF-DFnet.
 (i) Ours for LF-IINet. (j) Ours for DistgSSR.
 
 ![f6](/Figs/Fig6.png)  
 
-Fig. 6. For 2x LF SR, the perceptual merits of our method for DHR,testing = 4:2:0(A). (a) The ground truth LF image, Stanford Gantry-Tarot Cards S. (b)
+Fig. 6. For 2x LF SR, the perceptual merits of our method for D_{HR,testing} = 4:2:0(A). (a) The ground truth LF image, Stanford Gantry-Tarot Cards S. (b)
 The two magnified subimages of (a). (c) LF-InterNet. (d) LF-DFnet. (e) LF-IINet. (f) DistgSSR. (g) Ours for LF-InterNet. (h) Ours for
 LF-DFnet. (i) Ours for LF-IINet. (j) Ours for DistgSSR.  
 
-More Visual Results can visit [./Figs/420A](https://github.com/jasonlun1997/DCC-main/tree/main/Figs/420A), [./Figs/420D](https://github.com/jasonlun1997/DCC-main/tree/main/Figs/420D)  
+More Visual Results can visit with [./Figs/420A](https://github.com/jasonlun1997/DCC-main/tree/main/Figs/420A) or [./Figs/420D](https://github.com/jasonlun1997/DCC-main/tree/main/Figs/420D).  
 ## Code
 ### Dependecies
 * Python 3.9.16
@@ -32,7 +32,7 @@ More Visual Results can visit [./Figs/420A](https://github.com/jasonlun1997/DCC-
 * Matlab  
 ### Recognizer
 2x/4x position and scheme recognizer can be download from [GoogleDrive](https://drive.google.com/drive/folders/12eQfFK2Lm102WqTK5BCa1H6mp5VK7PBk?usp=sharing)  
-After download the five datasets, to generate the recognizer training or test data:
+After download the five datasets, and then generate the recognizer training or test data:
 * Setting the parameters
   ```
   src_dataset_for = 'training'; 
@@ -40,7 +40,7 @@ After download the five datasets, to generate the recognizer training or test da
   ```
   src_dataset_for = 'test'; 
   ```  
-  To generate the kind of data set you want, and Run it
+  To generate the kind of data set which you want, and Run it
   ```
   ./recognizer/DownsampleMat2png.m 
   ```  
@@ -52,7 +52,7 @@ After download the five datasets, to generate the recognizer training or test da
   ```
   patch_Sr_y = convert420_A(patch_Hr_y,factor); %420A down
   ```
-  To generate the kind of data set you want, and Run it
+  To generate the kind of data set which you want, and Run it
   ```
   Generate_Data_for_Training.m
   ```
@@ -66,7 +66,7 @@ After download the five datasets, to generate the recognizer training or test da
   ```
   temp_Lr_y = imresize(temp_Hr_y, downRatio);   %bicubic down
   ```
-  To generate the kind of data set you want, and Run it
+  To generate the kind of data set which you want, and Run it
   ```
   Generate_Data_for_Test.m
   ```
