@@ -24,7 +24,7 @@ Fig. 6. For 2x LF SR, the perceptual merits of our method for D_{HR,testing} = 4
 The two magnified subimages of (a). (c) LF-InterNet. (d) LF-DFnet. (e) LF-IINet. (f) DistgSSR. (g) Ours for LF-InterNet. (h) Ours for
 LF-DFnet. (i) Ours for LF-IINet. (j) Ours for DistgSSR.  
 
-More Visual Results can visit with [./Figs/420A](https://github.com/jasonlun1997/DCC-main/tree/main/Figs/420A) or [./Figs/420D](https://github.com/jasonlun1997/DCC-main/tree/main/Figs/420D).  
+More visual results can visit with [./Figs/420A](https://github.com/jasonlun1997/DCC-main/tree/main/Figs/420A) or [./Figs/420D](https://github.com/jasonlun1997/DCC-main/tree/main/Figs/420D).  
 ## Code
 ### Dependecies
 * Python 3.9.16
