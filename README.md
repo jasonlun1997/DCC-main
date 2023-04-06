@@ -6,11 +6,11 @@ Downsampling Consistency Correction-Based Quality Enhancement for CNN-Based Ligh
 
 ## Contributions
 A cascaded Swin Transformer-based recognizer is proposed to identify the downsampled position and downsampling scheme
-used in the LR testing LF image, and then the proposed DCC-based method is used to significantly improve the quality of
+used in the LR testing LF image, and then the proposed Downsampling Consistency Correction (DCC)-based method is used to significantly improve the quality of
 the upsampled LF image.
 
 ## Dataset
-We use the processed data by [LF-DFnet](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9286855), including EPFL, HCI, HCI_old, INRIA_Lytro and Stanford_Gantry datasets for training and testing. Please download the dataset in the official repository of [LF-DFnet](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9286855).
+We use the datasets which can be accessed from [LF-DFnet](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9286855), including EPFL, HCI, HCI_old, INRIA_Lytro and Stanford_Gantry datasets for training and testing. Please download the dataset in the official repository of [LF-DFnet]([https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9286855](https://github.com/YingqianWang/LF-DFnet)).
 
 ## Results
 ![f5](/Figs/Fig5.png)  
