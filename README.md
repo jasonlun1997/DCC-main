@@ -10,7 +10,7 @@ used in the LR testing LF image, and then the proposed DCC-based method is used 
 the upsampled LF image.
 
 ## Dataset
-We use the processed data by [LF-DFnet](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9286855), including EPFL, HCInew, HCIold, INRIA and STFgantry datasets for training and testing. Please download the dataset in the official repository of [LF-DFnet](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9286855).
+We use the processed data by [LF-DFnet](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9286855), including EPFL, HCI, HCI_old, INRIA_Lytro and Stanford_Gantry datasets for training and testing. Please download the dataset in the official repository of [LF-DFnet](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9286855).
 
 ## Results
 ![f5](/Figs/Fig5.png)  
